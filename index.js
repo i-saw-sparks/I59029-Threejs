@@ -4,7 +4,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-var geometry = new THREE.BoxGeometry(1, 1, 1)
+var geometry = new THREE.OctahedronGeometry(1,1)
 var material = new THREE.MeshBasicMaterial({ color: 0xff0051 })
 var cube = new THREE.Mesh(geometry, material)
 scene.add(cube)
@@ -21,12 +21,6 @@ scene.add( pointLight );
 
 var material = new THREE.MeshStandardMaterial( { color: 0xff0051 })
 
-var geometry = new THREE.BoxGeometry( 3, 3, 3)
-var material = new THREE.MeshBasicMaterial( {
- color: "#dadada", wireframe: true, transparent: true
-})
-var wireframeCube = new THREE.Mesh ( geometry, material )
-scene.add( wireframeCube )
 
 function animate() {
     requestAnimationFrame(animate)
