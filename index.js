@@ -24,8 +24,8 @@ var material = new THREE.MeshStandardMaterial( { color: 0xff0051 })
 
 function animate() {
     requestAnimationFrame(animate)
-    cube.rotation.x += 0.04;
-    cube.rotation.y += 0.04;
+    cube.rotation.x += 0.2;
+    cube.rotation.y += 0.01;
     renderer.render(scene, camera)
 }
 animate()
